@@ -15,6 +15,9 @@
   },
   "license": "UNLICENSED",
   "private": false,
+  "publishConfig": {
+    "registry": "https://npm.technologystudio.sk"
+  },
   "scripts": {
     "build": "yarn build:clean && yarn build:lib",
     "build:clean": "yarn rimraf lib",
@@ -27,6 +30,7 @@
     "lint": "eslint --format=node_modules/eslint-formatter-pretty --ext .jsx,.js,.ts,.tsx .",
     "fixcode": "eslint --format=node_modules/eslint-formatter-pretty --ext .jsx,.js,.ts,.tsx . --fix",
     "git-hook": "yarn -s lint-staged",
+    "ncu-dep": "yarn ncu --dep dev,prod,peer",
     "prepare": "husky install && yarn build",
     "print-txo-packages": "yarn list 2> /dev/null|grep @txo|sed 's/.*\\(@txo[^@]*\\)@^*\\([^ ]*\\).*/\\1@\\2/g'|sort|uniq",
     "sanity": "yarn lint && yarn build && tsc --noEmit && yarn test && yarn compare-boilerplate-version && echo 'success'",
@@ -57,6 +61,7 @@
     "husky": "^8.0.1",
     "jest": "^29.3.0",
     "lint-staged": "^13.0.3",
+    "npm-check-updates": "^16.3.18",
     "rimraf": "^3.0.2",
     "semantic-release": "^19.0.5",
     "semantic-release-slack-bot": "^3.5.3",
