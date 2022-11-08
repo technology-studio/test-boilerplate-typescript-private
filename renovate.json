@@ -3,15 +3,7 @@
   "extends": [
     "config:base",
     ":semanticCommits",
-    ":automergeMinor"
-  ],
-  "rangeStrategy": "bump",
-  "assignees": [
-    "rostislav-simonik",
-    "erik-slovak"
-  ],
-  "reviewers": [
-    "rostislav-simonik",
-    "erik-slovak"
+    ":automergeMinor",
+    "github>technology-studio/renovate-config-private"
   ]
 }
