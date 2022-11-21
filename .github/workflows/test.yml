@@ -7,6 +7,9 @@ on:
       - reopened
       - synchronize
 
+env:
+  NPM_PRIVATE_REGISTRY_TOKEN: ${{ secrets.NPM_PRIVATE_REGISTRY_TOKEN }}
+
 jobs:
   test:
     name: Unit tests
