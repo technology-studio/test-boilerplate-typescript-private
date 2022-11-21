@@ -30,7 +30,6 @@
     "lint": "eslint --format=node_modules/eslint-formatter-pretty --ext .jsx,.js,.ts,.tsx .",
     "fixcode": "eslint --format=node_modules/eslint-formatter-pretty --ext .jsx,.js,.ts,.tsx . --fix",
     "git-hook": "yarn -s lint-staged",
-    "ncu": "node node_modules/npm-check-updates/build/src/bin/cli.js --dep dev,prod,peer",
     "prepare": "husky install && yarn build",
     "print-txo-packages": "yarn list 2> /dev/null|grep @txo|sed 's/.*\\(@txo[^@]*\\)@^*\\([^ ]*\\).*/\\1@\\2/g'|sort|uniq",
     "sanity": "yarn lint && yarn build && tsc --noEmit && yarn test && yarn compare-boilerplate-version && echo 'success'",
